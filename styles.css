@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+.container .box{
+    background: #fff;
+    background-size: cover;
+    border-radius: 35px;
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+.container .box::before{
+    background: inherit;
+    background-size: cover;
+    border-radius: 35px;
+    content: '';
+    filter: blur(12px);
+    height: 100%;
+    left:0;
+    opacity: 0.7;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: -1;
+}
